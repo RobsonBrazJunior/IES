@@ -10,12 +10,21 @@ namespace Capitulo02
             var iesUTFPR = new Instituicao()
             {
                 Nome = "UTFPR",
-                Endereco = "Medianeira"
-            };            
+                Endereco = new Endereco()
+                {
+                    Rua = "Brasil",
+                    Numero = "1000"
+                }
+            };
 
-            var iesCC = new Instituicao();
-            iesCC.Nome = "Casa do Código";
-            iesCC.Endereco = "São Paulo";
+            var iesCC = new Instituicao()
+            {
+                Nome = "Casa do Código",
+                Endereco = new Endereco()
+                {
+                    Bairro = "Liberdade"
+                }
+            };
 
             var dptoEnsino = new Departamento()
             {
