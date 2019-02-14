@@ -54,6 +54,32 @@ namespace Capitulo02
                 Console.WriteLine($"==> {iesCC.DepartamentoPorIndice(i).Nome}");
             }
 
+            Console.WriteLine();
+            Console.WriteLine("=====================================");
+
+            dptoAlimentos.RegistrarCurso(
+                new Curso {
+                    Nome = "Tecnologia de Alimentos",
+                    CargaHoraria = 2000
+                }
+            );
+
+            dptoAlimentos.RegistrarCurso(
+                new Curso
+                {
+                    Nome = "Engenharia de Alimentos",
+                    CargaHoraria = 3000
+                }
+            );
+
+            Console.WriteLine();
+            Console.WriteLine($"Cursos no departamento de {dptoAlimentos.Nome}");
+
+            foreach (var curso in dptoAlimentos.Cursos)
+            {
+                Console.WriteLine($"==> {curso.Nome} ({curso.CargaHoraria}h)");
+            }
+
             Console.Write("Pressione qualquer tecla para continuar");
             Console.ReadKey();
         }
