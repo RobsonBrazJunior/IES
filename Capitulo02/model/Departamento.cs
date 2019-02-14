@@ -1,6 +1,6 @@
 ﻿namespace Capitulo02.model
 {
-    class Departamento
+    public class Departamento
     {
         public string Nome { get; set; }
     }
