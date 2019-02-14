@@ -7,16 +7,41 @@ namespace Capitulo02
     {
         static void Main(string[] args)
         {
-            Instituicao instituicao = new Instituicao();
-            Console.Write("Informe o nome da instituição: ");
-            instituicao.Nome = Console.ReadLine();
+            var iesUTFPR = new Instituicao();
+            iesUTFPR.Nome = "UTFPR";
+            iesUTFPR.Endereco = "Medianeira";
 
-            Console.WriteLine("Informe o endereço da instituição: ");
-            instituicao.Endereco = Console.ReadLine();
+            var iesCC = new Instituicao();
+            iesCC.Nome = "Casa do Código";
+            iesCC.Endereco = "São Paulo";
 
-            Console.WriteLine("====================================");
-            Console.WriteLine($"Preenchido os dados da {instituicao.Nome}!");
-            Console.Write("Pressione qualquer tecla para encerrar");
+            var dptoEnsno = new Departamento();
+            dptoEnsno.Nome = "Computação";
+
+            var dptoAlimentos = new Departamento();
+            dptoAlimentos.Nome = "Alimentos";
+
+            var dptoRevisao = new Departamento();
+            dptoRevisao.Nome = "Revisão Escrita";
+
+            iesUTFPR.RegistrarDepartamento(dptoEnsno);
+            iesUTFPR.RegistrarDepartamento(dptoAlimentos);
+
+            iesCC.RegistrarDepartamento(dptoRevisao);
+
+            Console.WriteLine("UTFPR");
+            for (int i = 0; i < iesUTFPR.ObterQuantidadeDeparetamentos(); i++)
+            {
+                Console.WriteLine($"==> {iesUTFPR.Departamentos[i].Nome}");
+            }
+
+            Console.WriteLine("Casa do Código");
+            for (int i = 0; i < iesCC.ObterQuantidadeDeparetamentos(); i++)
+            {
+                Console.WriteLine($"==> {iesCC.Departamentos[i].Nome}");
+            }
+
+            Console.Write("Pressione qualquer tecla para continuar");
             Console.ReadKey();
         }
     }
