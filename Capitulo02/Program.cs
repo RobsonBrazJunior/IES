@@ -55,7 +55,7 @@ namespace Capitulo02
             }
 
             Console.WriteLine();
-            Console.WriteLine("=====================================");
+            Console.WriteLine("=======================================");
 
             dptoAlimentos.RegistrarCurso(
                 new Curso {
@@ -79,6 +79,20 @@ namespace Capitulo02
             {
                 Console.WriteLine($"==> {curso.Nome} ({curso.CargaHoraria}h)");
             }
+
+            Console.WriteLine();
+            Console.WriteLine("=======================================");
+            Console.WriteLine();
+
+            dptoAlimentos.FecharDepartamento();
+            dptoAlimentos = null;
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("O departamento de alimentos foi fechado");
+
+            Console.WriteLine();
+            Console.WriteLine("=======================================");
+            Console.WriteLine();
 
             Console.Write("Pressione qualquer tecla para continuar");
             Console.ReadKey();
