@@ -5,7 +5,7 @@
         public string Nome { get; set; }
         public string Endereco { get; set; }
 
-        public Departamento[] Departamentos { get; } = new Departamento[10];
+        private Departamento[] Departamentos { get; } = new Departamento[10];
 
         private int quantidadeDepartamentos = 0;
 
@@ -18,6 +18,11 @@
         public int ObterQuantidadeDeparetamentos()
         {
             return quantidadeDepartamentos;
+        }
+
+        public Departamento DepartamentoPorIndice(int indice)
+        {
+            return Departamentos[indice];
         }
     }
 }
