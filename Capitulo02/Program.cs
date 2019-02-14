@@ -84,9 +84,17 @@ namespace Capitulo02
             Console.WriteLine("=======================================");
             Console.WriteLine();
 
+            var ctAlimentos = new Curso()
+            {
+                Nome = "Tecnologia em Alimentos",
+                CargaHoraria = 2000
+            };
+
+            if (!dptoAlimentos.Cursos.Contains(ctAlimentos))
+                dptoAlimentos.RegistrarCurso(ctAlimentos);
+
             dptoAlimentos.FecharDepartamento();
             dptoAlimentos = null;
-            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("O departamento de alimentos foi fechado");
 
