@@ -21,5 +21,13 @@ namespace Capitulo02.model
         {
             return Cursos[indice];
         }
+
+        public void FecharDepartamento()
+        {
+            while (Cursos.Count > 0)
+            {
+                Cursos.RemoveAt(0);
+            }
+        }
     }
 }
