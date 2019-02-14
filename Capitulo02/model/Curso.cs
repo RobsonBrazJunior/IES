@@ -1,4 +1,6 @@
-﻿namespace Capitulo02.model
+﻿using System.Collections.Generic;
+
+namespace Capitulo02.model
 {
     public class Curso
     {
@@ -14,6 +16,11 @@
             }
 
             return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return (11 + this.Nome == null ? 0 : this.Nome.GetHashCode());
         }
     }
 }
