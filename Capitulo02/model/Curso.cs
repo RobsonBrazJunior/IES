@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Capitulo02.model
 {
@@ -6,6 +7,22 @@ namespace Capitulo02.model
     {
         public string Nome { get; set; }
         public int CargaHoraria { get; set; }
+        public HashSet<Disciplina> Disciplinas { get; } = new HashSet<Disciplina>();
+
+        public void RegistrarDisciplina(Disciplina d)
+        {
+            Disciplinas.Add(d);
+        }
+
+        public int ObterQuantidadeDisciplinasDoCurso()
+        {
+            return Disciplinas.Count;
+        }
+
+        public Disciplina ObterDisciplinaPorNome(string nome)
+        {
+            return Disciplinas.Where<Disciplina>(n => n.Nome.Equals(nome)).FirstOrDefault();
+        }
 
         public override bool Equals(object obj)
         {
