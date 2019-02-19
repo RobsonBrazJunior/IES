@@ -58,14 +58,14 @@ namespace Capitulo02
             Console.WriteLine("=======================================");
 
             dptoAlimentos.RegistrarCurso(
-                new Curso {
+                new Graduacao {
                     Nome = "Tecnologia de Alimentos",
                     CargaHoraria = 2000
                 }
             );
 
             dptoAlimentos.RegistrarCurso(
-                new Curso
+                new Graduacao
                 {
                     Nome = "Engenharia de Alimentos",
                     CargaHoraria = 3000
@@ -84,7 +84,7 @@ namespace Capitulo02
             Console.WriteLine("=======================================");
             Console.WriteLine();
 
-            var ctAlimentos = new Curso()
+            var ctAlimentos = new Graduacao()
             {
                 Nome = "Tecnologia em Alimentos",
                 CargaHoraria = 2000
@@ -102,7 +102,7 @@ namespace Capitulo02
             Console.WriteLine("=======================================");
             Console.WriteLine();
 
-            var cursoCC = new Curso()
+            var cursoCC = new Graduacao()
             {
                 Nome = "Ciência da Computação",
                 CargaHoraria = 3000
