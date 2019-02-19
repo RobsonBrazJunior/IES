@@ -48,6 +48,7 @@
     <Compile Include="model\Disciplina.cs" />
     <Compile Include="model\Endereco.cs" />
     <Compile Include="model\Instituicao.cs" />
+    <Compile Include="model\Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
