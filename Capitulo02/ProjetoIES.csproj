@@ -49,7 +49,10 @@
     <Compile Include="model\Endereco.cs" />
     <Compile Include="model\Graduacao.cs" />
     <Compile Include="model\Instituicao.cs" />
+    <Compile Include="model\LatoSensu.cs" />
+    <Compile Include="model\PosGraduacao.cs" />
     <Compile Include="model\Professor.cs" />
+    <Compile Include="model\StrictoSensu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
