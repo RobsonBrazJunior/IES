@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Capitulo02.model
 {
@@ -28,6 +29,11 @@ namespace Capitulo02.model
             {
                 Cursos.RemoveAt(0);
             }
+        }
+
+        public Curso ObterCursoPorNome(string nome)
+        {
+            return Cursos.Where<Curso>(n => n.Nome.Equals(nome)).FirstOrDefault();
         }
     }
 }
