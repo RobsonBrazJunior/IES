@@ -1,4 +1,5 @@
 ﻿using Capitulo02.model;
+using Capitulo02.Repo;
 using System;
 
 namespace Capitulo02
@@ -139,6 +140,29 @@ namespace Capitulo02
             {
                 Console.WriteLine($"==> {d.Nome} ({d.CargaHoraria})");
             }
+
+            Console.WriteLine();
+            Console.WriteLine("=======================================");
+            Console.WriteLine();
+
+            var graduacao = new Graduacao() { Nome = "Curso de Graduação" };
+            var latoSensu = new LatoSensu() { Nome = "Curso de Lato Sensu" };
+            var strictoSensu = new StrictoSensu() { Nome = "Curso de Stricto Sensu" };
+
+            var repositorioCursos = new RepositorioCurso();
+            repositorioCursos.Gravar(graduacao);
+            repositorioCursos.Gravar(latoSensu);
+            repositorioCursos.Gravar(strictoSensu);
+
+            Console.WriteLine("Cursos gravados");
+            foreach (var curso in repositorioCursos.ObterTodos())
+            {
+                Console.WriteLine($"==> {curso.Nome} ({curso.GetType()})");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("=======================================");
+            Console.WriteLine();
 
             Console.Write("Pressione qualquer tecla para continuar");
             Console.ReadKey();
