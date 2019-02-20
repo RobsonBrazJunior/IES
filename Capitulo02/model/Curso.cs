@@ -30,7 +30,7 @@ namespace Capitulo02.model
             p.Cursos.Add(this);
         }
 
-        public void RegistrarDisciplina(Disciplina d)
+        public virtual void RegistrarDisciplina(Disciplina d)
         {
             Disciplinas.Add(d);
         }
