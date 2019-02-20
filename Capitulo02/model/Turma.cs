@@ -6,6 +6,11 @@ namespace Capitulo02.model
     {
         private Curso _Curso;
 
+        public Turma(Curso curso)
+        {
+            _Curso = curso;
+        }
+
         public string CodigoTurma { get; set; }
         public PeriodoCursoEnum PeriodoCurso { get; set; }
         public TurnoTurmaEnum TurnoTurma { get; set; }

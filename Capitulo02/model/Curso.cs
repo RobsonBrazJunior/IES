@@ -9,6 +9,13 @@ namespace Capitulo02.model
         public int CargaHoraria { get; set; }
         public HashSet<Disciplina> Disciplinas { get; } = new HashSet<Disciplina>();
         public HashSet<Professor> Professores { get; } = new HashSet<Professor>();
+        public HashSet<Turma> Turmas { get; } = new HashSet<Turma>();
+
+        public void RegistrarTurma (Turma t)
+        {
+            Turmas.Add(t);
+            t.RegistrarCurso(this);
+        }
 
         public void RegistrarProfessor (Professor p)
         {
