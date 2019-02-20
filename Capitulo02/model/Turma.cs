@@ -1,4 +1,6 @@
 ﻿using Capitulo02.Enum;
+using System;
+using System.Collections.Generic;
 
 namespace Capitulo02.model
 {
@@ -15,6 +17,17 @@ namespace Capitulo02.model
         public PeriodoCursoEnum PeriodoCurso { get; set; }
         public TurnoTurmaEnum TurnoTurma { get; set; }
         public Curso Curso { get { return _Curso; } }
+        public HashSet<Matricula> Matriculas { get; } = new HashSet<Matricula>();
+
+        public void RegistrarMatricula (Matricula m)
+        {
+            if (this.Matriculas.Count > 2)
+            {
+                throw new Exception("Turma já não dispões de vagas")
+;           }
+            this.Matriculas.Add(m);
+            m.Turma = this;
+        }
 
         public void RegistrarCurso(Curso curso)
         {
