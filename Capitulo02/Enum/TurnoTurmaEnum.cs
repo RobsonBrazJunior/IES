@@ -4,6 +4,6 @@
     {
         Matutuo = 1,
         Vespertino = 3,
-        Notunro
+        Noturno
     }
 }
