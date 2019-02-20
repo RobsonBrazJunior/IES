@@ -182,11 +182,20 @@ namespace Capitulo02
 
             foreach (var d in cursoCC.Disciplinas)
             {
-                turma.RegistrarMatricula(new Matricula()
+                try
                 {
-                    Aluno = aluno,
-                    Disciplina = d
-                });
+                    turma.RegistrarMatricula(new Matricula()
+                    {
+                        Aluno = aluno,
+                        Disciplina = d
+                    });
+                } catch (Exception ex)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine();                    
+                }
+                
             }
 
             Console.WriteLine("Registro de matrículas concluído");

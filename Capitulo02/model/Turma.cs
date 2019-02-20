@@ -25,7 +25,7 @@ namespace Capitulo02.model
         {
             if (this.Matriculas.Count > 2)
             {
-                throw new Exception("Turma já não dispões de vagas")
+                throw new Exception("Turma já não dispõe de vagas")
 ;           }
             this.Matriculas.Add(m);
             m.Turma = this;
