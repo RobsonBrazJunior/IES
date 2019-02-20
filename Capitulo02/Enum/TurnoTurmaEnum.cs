@@ -2,7 +2,7 @@
 {
     public enum TurnoTurmaEnum
     {
-        Matutuo = 1,
+        Matutino = 1,
         Vespertino = 3,
         Noturno
     }

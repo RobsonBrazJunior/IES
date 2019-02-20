@@ -164,6 +164,37 @@ namespace Capitulo02
             Console.WriteLine("=======================================");
             Console.WriteLine();
 
+            var turma = new Turma()
+            {
+                CodigoTurma = "1",
+                PeriodoCurso = Enum.PeriodoCursoEnum.Primeiro,
+                TurnoTurma = Enum.TurnoTurmaEnum.Matutino
+            };
+
+            var aluno = new Aluno()
+            {
+                RegistroAcademico = "1",
+                Nome = "Asdrubal"
+            };
+
+            cursoCC.RegistarAluno(aluno);
+            cursoCC.RegistrarTurma(turma);
+
+            foreach (var d in cursoCC.Disciplinas)
+            {
+                turma.RegistrarMatricula(new Matricula()
+                {
+                    Aluno = aluno,
+                    Disciplina = d
+                });
+            }
+
+            Console.WriteLine("Registro de matrículas concluído");
+
+            Console.WriteLine();
+            Console.WriteLine("=======================================");
+            Console.WriteLine();
+
             Console.Write("Pressione qualquer tecla para continuar");
             Console.ReadKey();
         }

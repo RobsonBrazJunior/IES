@@ -8,6 +8,8 @@ namespace Capitulo02.model
     {
         private Curso _Curso;
 
+        public Turma() { }
+
         public Turma(Curso curso)
         {
             _Curso = curso;
