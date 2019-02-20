@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelo;
+using Servico;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Apresentacao
 {
     public partial class DisciplinaForm : Form
     {
+        DisciplinaServico disciplinaServico = new DisciplinaServico();
+
         public DisciplinaForm()
         {
             InitializeComponent();
@@ -24,7 +28,12 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            disciplinaServico.Inserir(new Disciplina()
+            {
+                Nome = txtNome.Text,
+                CargaHoraria = Convert.ToInt16(txtCargaHoraria.Text)
+            });
+            MessageBox.Show("Inserção realizada com sucesso!");
         }
     }
 }
