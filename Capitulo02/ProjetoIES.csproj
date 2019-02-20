@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Enum\PeriodoCursoEnum.cs" />
     <Compile Include="Enum\TurnoTurmaEnum.cs" />
+    <Compile Include="model\Aluno.cs" />
     <Compile Include="model\Curso.cs" />
     <Compile Include="model\Departamento.cs" />
     <Compile Include="model\Disciplina.cs" />
