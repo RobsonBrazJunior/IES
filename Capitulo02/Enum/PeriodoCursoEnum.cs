@@ -1,4 +1,4 @@
-﻿namespace Capitulo02.Enum
+﻿namespace ProjetoIES.Enum
 {
     public enum PeriodoCursoEnum
     {

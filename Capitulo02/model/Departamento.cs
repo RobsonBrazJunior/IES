@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Capitulo02.model
+namespace ProjetoIES.model
 {
     public class Departamento
     {

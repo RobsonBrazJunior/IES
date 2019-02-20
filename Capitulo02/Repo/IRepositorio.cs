@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Capitulo02.Repo
+namespace ProjetoIES.Repo
 {
     public interface IRepositorio<T>
     {

@@ -1,8 +1,8 @@
-﻿using Capitulo02.model;
-using Capitulo02.Repo;
+﻿using ProjetoIES.model;
+using ProjetoIES.Repo;
 using System;
 
-namespace Capitulo02
+namespace ProjetoIES
 {
     class Program
     {

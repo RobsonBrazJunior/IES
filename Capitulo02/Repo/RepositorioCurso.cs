@@ -1,9 +1,8 @@
-﻿using Capitulo02.model;
-using System;
+﻿using ProjetoIES.model;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Capitulo02.Repo
+namespace ProjetoIES.Repo
 {
     public class RepositorioCurso : IRepositorio<Curso>
     {

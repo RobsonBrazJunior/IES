@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Capitulo02.model
+namespace ProjetoIES.model
 {
     public class Professor
     {
