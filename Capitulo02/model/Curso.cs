@@ -10,6 +10,13 @@ namespace Capitulo02.model
         public HashSet<Disciplina> Disciplinas { get; } = new HashSet<Disciplina>();
         public HashSet<Professor> Professores { get; } = new HashSet<Professor>();
         public HashSet<Turma> Turmas { get; } = new HashSet<Turma>();
+        public HashSet<Aluno> Alunos { get; } = new HashSet<Aluno>();
+
+        public void RegistarAluno(Aluno a)
+        {
+            this.Alunos.Add(a);
+            a.Cursos.Add(this);
+        }
 
         public void RegistrarTurma (Turma t)
         {
