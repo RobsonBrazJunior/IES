@@ -25,9 +25,24 @@ namespace Persistencia
             this.connection.Close();
         }
 
-        //public List<Disciplina> ObterTodas()
-        //{
-        //    return this.Repository;
-        //}
+        public List<Disciplina> ObterTodas()
+        {
+            List<Disciplina> disciplinas = new List<Disciplina>();
+            var command = new SqlCommand("select disciplinaid, nome, cargahoraria from DISCIPLINAS", connection);
+            connection.Open();
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var disciplina = new Disciplina();
+                    disciplina.DisciplinaID = reader.GetInt32(0);
+                    disciplina.Nome = reader.GetString(1);
+                    disciplina.CargaHoraria = reader.GetInt32(2);
+                    disciplinas.Add(disciplina);                    
+                }
+            }
+            connection.Close();
+            return disciplinas;
+        }
     }
 }
