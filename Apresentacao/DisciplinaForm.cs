@@ -18,6 +18,7 @@ namespace Apresentacao
     {
         DisciplinaServico disciplinaServico;
         string connectionString = ConfigurationManager.ConnectionStrings["CS_ADO_NET"].ConnectionString;
+        Disciplina disciplinaAtual = new Disciplina();
 
         public DisciplinaForm()
         {
@@ -46,6 +47,20 @@ namespace Apresentacao
         {
             dgvDisciplinas.DataSource = null;
             dgvDisciplinas.DataSource = disciplinaServico.ObterTodas();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            disciplinaAtual = disciplinaServico.ObterPorId(Convert.ToInt32(txtIDPesquisar.Text));
+            if (disciplinaAtual.DisciplinaID == null)
+            {
+                MessageBox.Show("Disciplina não encontrada");
+            }
+            else
+            {
+                txtNome.Text = disciplinaAtual.Nome;
+                txtCargaHoraria.Text = disciplinaAtual.CargaHoraria.ToString();
+            }
         }
     }
 }
