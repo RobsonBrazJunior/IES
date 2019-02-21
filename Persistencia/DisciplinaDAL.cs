@@ -78,7 +78,7 @@ namespace Persistencia
         {
             this.connection.Open();
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = "update DISCIPLINAS set nome=@nome, cargahoria=@cargahoraria where disciplinaid=@disciplinaid";
+            command.CommandText = "update DISCIPLINAS set nome=@nome, cargahoraria=@cargahoraria where disciplinaid=@disciplinaid";
             command.Parameters.AddWithValue("@nome", disciplina.Nome);
             command.Parameters.AddWithValue("@cargahoraria", disciplina.CargaHoraria);
             command.Parameters.AddWithValue("@disciplinaid", disciplina.DisciplinaID);
