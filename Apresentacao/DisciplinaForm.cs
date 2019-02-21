@@ -3,7 +3,9 @@ using Servico;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,11 +16,13 @@ namespace Apresentacao
 {
     public partial class DisciplinaForm : Form
     {
-        DisciplinaServico disciplinaServico = new DisciplinaServico();
+        DisciplinaServico disciplinaServico;
+        string connectionString = ConfigurationManager.ConnectionStrings["CS_ADO_NET"].ConnectionString;
 
         public DisciplinaForm()
         {
             InitializeComponent();
+            disciplinaServico = new DisciplinaServico(new SqlConnection(connectionString));
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,14 +37,14 @@ namespace Apresentacao
                 Nome = txtNome.Text,
                 CargaHoraria = Convert.ToInt16(txtCargaHoraria.Text)
             });
-            AtualizarDataGridView();
+            //AtualizarDataGridView();
             MessageBox.Show("Inserção realizada com sucesso!");
         }
 
-        private void AtualizarDataGridView()
-        {
-            dgvDisciplinas.DataSource = null;
-            dgvDisciplinas.DataSource = disciplinaServico.ObterTodas();
-        }
+        //private void AtualizarDataGridView()
+        //{
+        //    dgvDisciplinas.DataSource = null;
+        //    dgvDisciplinas.DataSource = disciplinaServico.ObterTodas();
+        //}
     }
 }
