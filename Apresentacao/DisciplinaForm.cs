@@ -33,7 +33,14 @@ namespace Apresentacao
                 Nome = txtNome.Text,
                 CargaHoraria = Convert.ToInt16(txtCargaHoraria.Text)
             });
+            AtualizarDataGridView();
             MessageBox.Show("Inserção realizada com sucesso!");
+        }
+
+        private void AtualizarDataGridView()
+        {
+            dgvDisciplinas.DataSource = null;
+            dgvDisciplinas.DataSource = disciplinaServico.ObterTodas();
         }
     }
 }

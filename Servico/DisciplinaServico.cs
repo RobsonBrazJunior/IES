@@ -1,5 +1,6 @@
 ﻿using Modelo;
 using Persistencia;
+using System.Collections.Generic;
 
 namespace Servico
 {
@@ -10,6 +11,11 @@ namespace Servico
         public void Inserir(Disciplina disciplina)
         {
             disciplinaDAL.Inserir(disciplina);
+        }
+
+        public List<Disciplina> ObterTodas()
+        {
+            return disciplinaDAL.ObterTodas();
         }
     }
 }

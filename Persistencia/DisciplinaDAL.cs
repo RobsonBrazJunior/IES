@@ -11,5 +11,10 @@ namespace Persistencia
         {
             this.Repository.Add(disciplina);
         }
+
+        public List<Disciplina> ObterTodas()
+        {
+            return this.Repository;
+        }
     }
 }
