@@ -60,5 +60,19 @@ namespace Apresentacao
                 txtCargaHoraria.Text = disciplinaAtual.CargaHoraria.ToString();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (disciplinaAtual.DisciplinaID == null)
+            {
+                MessageBox.Show("Pesquise por uma disciplina antes");
+            }
+            else
+            {
+                disciplinaServico.Remover(disciplinaAtual);
+                MessageBox.Show("Disciplina Removida");
+                AtualizarDataGridView();
+            }
+        }
     }
 }
