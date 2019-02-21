@@ -50,6 +50,8 @@ namespace Persistencia
             var command = new SqlCommand("select disciplinaid, nome, cargahoraria from DISCIPLINAS " +
                 "where disciplinaid = @disciplinaid",
                 this.connection);
+            command.Parameters.AddWithValue("@disciplinaid", id);
+            connection.Open();
 
             using (SqlDataReader reader = command.ExecuteReader())
             {
@@ -62,6 +64,18 @@ namespace Persistencia
             }
             connection.Close();
             return disciplina;
+        }
+
+        public void Atualizar (Disciplina disciplina)
+        {
+            this.connection.Open();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "update DISCIPLINAS set nome=@nome, cargahoria=@cargahoraria where disciplinaid=@disciplinaid";
+            command.Parameters.AddWithValue("@nome", disciplina.Nome);
+            command.Parameters.AddWithValue("@cargahoraria", disciplina.CargaHoraria);
+            command.Parameters.AddWithValue("@disciplinaid", disciplina.DisciplinaID);
+            command.ExecuteNonQuery();
+            this.connection.Close();
         }
     }
 }
