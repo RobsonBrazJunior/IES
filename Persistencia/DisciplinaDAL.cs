@@ -13,7 +13,15 @@ namespace Persistencia
             this.connection = connection;
         }
 
-        public void Inserir (Disciplina disciplina)
+        public void Gravar (Disciplina disciplina)
+        {
+            if (disciplina.DisciplinaID == null)
+                Inserir(disciplina);
+            else
+                Atualizar(disciplina);
+        }
+
+        private void Inserir (Disciplina disciplina)
         {
             this.connection.Open();
             SqlCommand command = connection.CreateCommand();
@@ -66,7 +74,7 @@ namespace Persistencia
             return disciplina;
         }
 
-        public void Atualizar (Disciplina disciplina)
+        private void Atualizar (Disciplina disciplina)
         {
             this.connection.Open();
             SqlCommand command = connection.CreateCommand();
