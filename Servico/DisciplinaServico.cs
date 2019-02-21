@@ -23,5 +23,10 @@ namespace Servico
         {
             return disciplinaDAL.ObterTodas();
         }
+
+        public Disciplina ObterPorId (long id)
+        {
+            return disciplinaDAL.ObterPorId(id);
+        }
     }
 }
