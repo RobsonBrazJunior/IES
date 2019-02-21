@@ -19,9 +19,9 @@ namespace Servico
             disciplinaDAL.Inserir(disciplina);
         }
 
-        //public List<Disciplina> ObterTodas()
-        //{
-        //    return disciplinaDAL.ObterTodas();
-        //}
+        public List<Disciplina> ObterTodas()
+        {
+            return disciplinaDAL.ObterTodas();
+        }
     }
 }

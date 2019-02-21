@@ -5,7 +5,7 @@
         public long? DisciplinaID { get; set; }
         public string Nome { get; set; }
         public int CargaHoraria { get; set; }
-
+        
         public override bool Equals(object obj)
         {
             if (obj is Disciplina)

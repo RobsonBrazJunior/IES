@@ -23,6 +23,7 @@ namespace Apresentacao
         {
             InitializeComponent();
             disciplinaServico = new DisciplinaServico(new SqlConnection(connectionString));
+            AtualizarDataGridView();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,14 +38,14 @@ namespace Apresentacao
                 Nome = txtNome.Text,
                 CargaHoraria = Convert.ToInt16(txtCargaHoraria.Text)
             });
-            //AtualizarDataGridView();
+            AtualizarDataGridView();
             MessageBox.Show("Inserção realizada com sucesso!");
         }
 
-        //private void AtualizarDataGridView()
-        //{
-        //    dgvDisciplinas.DataSource = null;
-        //    dgvDisciplinas.DataSource = disciplinaServico.ObterTodas();
-        //}
+        private void AtualizarDataGridView()
+        {
+            dgvDisciplinas.DataSource = null;
+            dgvDisciplinas.DataSource = disciplinaServico.ObterTodas();
+        }
     }
 }
