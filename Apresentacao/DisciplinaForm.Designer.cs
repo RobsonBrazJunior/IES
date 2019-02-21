@@ -34,6 +34,10 @@
             this.txtCargaHoraria = new System.Windows.Forms.TextBox();
             this.btnInserir = new System.Windows.Forms.Button();
             this.dgvDisciplinas = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIDPesquisar = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisciplinas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,14 +89,52 @@
             this.dgvDisciplinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDisciplinas.Location = new System.Drawing.Point(15, 84);
             this.dgvDisciplinas.Name = "dgvDisciplinas";
-            this.dgvDisciplinas.Size = new System.Drawing.Size(349, 320);
+            this.dgvDisciplinas.Size = new System.Drawing.Size(349, 275);
             this.dgvDisciplinas.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 379);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "ID:";
+            // 
+            // txtIDPesquisar
+            // 
+            this.txtIDPesquisar.Location = new System.Drawing.Point(42, 376);
+            this.txtIDPesquisar.Name = "txtIDPesquisar";
+            this.txtIDPesquisar.Size = new System.Drawing.Size(56, 20);
+            this.txtIDPesquisar.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(110, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Pesquisar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(289, 374);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Remover";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // DisciplinaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 416);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtIDPesquisar);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvDisciplinas);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.txtCargaHoraria);
@@ -115,5 +157,9 @@
         private System.Windows.Forms.TextBox txtCargaHoraria;
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.DataGridView dgvDisciplinas;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtIDPesquisar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
