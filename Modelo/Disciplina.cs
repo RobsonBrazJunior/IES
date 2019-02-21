@@ -2,6 +2,7 @@
 {
     public class Disciplina
     {
+        public long? DisciplinaID { get; set; }
         public string Nome { get; set; }
         public int CargaHoraria { get; set; }
 
